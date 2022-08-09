@@ -169,6 +169,7 @@ namespace cityInfo.Controllers
             return city;
         }
         //----------------------------------------------ENCRYPT----------------------------------------------
+        #region kullanılmayan crypt metodları
         static byte[] EncryptStringToBytes_Aes(CityProp cityprop, byte[] Key, byte[] IV)
         {
             // Check arguments.
@@ -276,7 +277,8 @@ namespace cityInfo.Controllers
             byte[] encrypted = EncryptStringToBytes_Aes(cityprop, myAes.Key, myAes.IV);
             string ecString = byteToString(encrypted);
             return ecString;
-        }
+        } 
+        #endregion
         //-------------------------------ŞEHİR ŞİFRELEME METODU BİTİŞ--------------------------------
         public class Crypt
         {
