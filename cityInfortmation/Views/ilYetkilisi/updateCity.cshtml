@@ -1,0 +1,114 @@
+﻿
+@model CityInformation.Models.Entities.CityProp;
+
+@{
+    ViewData["Title"] = "City Update";
+}
+
+<h1>Update City</h1>
+
+<h4>City</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="updateCity" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="cityCodeId" />
+
+            <div class="form-group">
+
+           
+                
+                <span asp-validation-for="cityName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                <label asp-for="cityName" class="control-label"></label>
+                <input asp-for="cityName" class="form-control" />
+                <span asp-validation-for="cityName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="citySaglikUsername" class="control-label"></label>
+                <input asp-for="citySaglikUsername" class="form-control" />
+                <span asp-validation-for="citySaglikUsername" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cityItfaiyeUsername" class="control-label"></label>
+                <input asp-for="cityItfaiyeUsername" class="form-control" />
+                <span asp-validation-for="cityItfaiyeUsername" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cityJandarmaUsername" class="control-label"></label>
+                <input asp-for="cityJandarmaUsername" class="form-control" />
+                <span asp-validation-for="cityJandarmaUsername" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cityEmniyetUsername" class="control-label"></label>
+                <input asp-for="cityEmniyetUsername" class="form-control" />
+                <span asp-validation-for="cityEmniyetUsername" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cityAfadUsername" class="control-label"></label>
+                <input asp-for="cityAfadUsername" class="form-control" />
+                <span asp-validation-for="cityAfadUsername" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="citySGuvenlikUsername" class="control-label"></label>
+                <input asp-for="citySGuvenlikUsername" class="form-control" />
+                <span asp-validation-for="citySGuvenlikUsername" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cityOrmanUsername" class="control-label"></label>
+                <input asp-for="cityOrmanUsername" class="form-control" />
+                <span asp-validation-for="cityOrmanUsername" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="citySaglikPin" class="control-label"></label>
+                <input asp-for="citySaglikPin" class="form-control" />
+                <span asp-validation-for="citySaglikPin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cityItfaiyePin" class="control-label"></label>
+                <input asp-for="cityItfaiyePin" class="form-control" />
+                <span asp-validation-for="cityItfaiyePin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cityJandarmaPin" class="control-label"></label>
+                <input asp-for="cityJandarmaPin" class="form-control" />
+                <span asp-validation-for="cityJandarmaPin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cityEmniyetPin" class="control-label"></label>
+                <input asp-for="cityEmniyetPin" class="form-control" />
+                <span asp-validation-for="cityEmniyetPin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cityAfadPin" class="control-label"></label>
+                <input asp-for="cityAfadPin" class="form-control" />
+                <span asp-validation-for="cityAfadPin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="citySGuvenlikPin" class="control-label"></label>
+                <input asp-for="citySGuvenlikPin" class="form-control" />
+                <span asp-validation-for="citySGuvenlikPin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cityOrmanPin" class="control-label"></label>
+                <input asp-for="cityOrmanPin" class="form-control" />
+                <span asp-validation-for="cityOrmanPin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="flet_id" class="control-label"></label>
+                <input asp-for="flet_id" class="form-control" />
+                <span asp-validation-for="flet_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

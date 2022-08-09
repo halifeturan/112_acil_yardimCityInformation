@@ -1,0 +1,62 @@
+﻿@using CityInformation.Models
+@using cityInfortmation.Controllers
+@model IEnumerable<CityInformation.Models.Entities.CityProp>
+@{
+    ViewData["Title"] = "Add City";
+}
+@{
+    Context dbContext = new Context();
+    int i = 0;
+    foreach (var item in dbContext.CityProp.ToList())  //Döngünün çalışabilmesi için veri tabanına kayıtlı en az bir il olması gerek. Rastgele bir veri de olabilir.
+    {                                                  //Döngü çalışmazsa şehir ekleme sayfası dolmaz.
+        var city = item;
+        if (dbContext.CityProp.Find(HomeController.yetkiliId)==null)
+        {
+            <form asp-action="addCity" asp-controller="ilYetkilisi" method="post">
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-md" name="cityName" placeholder="Şehir Adı" />
+                    <input type="text" class="form-control form-control-md" name="citySaglikUsername" placeholder="Sağlık Username" />
+                    <input type="text" class="form-control form-control-md" name="cityItfaiyeUsername" placeholder="İtfaiye Username" />
+                    <input type="text" class="form-control form-control-md" name="cityJandarmaUsername" placeholder="Jandarma Username" />
+                    <input type="text" class="form-control form-control-md" name="cityEmniyetUsername" placeholder="Emniyet Username" />
+                    <input type="text" class="form-control form-control-md" name="cityAfadUsername" placeholder="Afad Username" />
+                    <input type="text" class="form-control form-control-md" name="citySGuvenlikUsername" placeholder="Sahil Güvenlik Username" />
+                    <input type="text" class="form-control form-control-md" name="cityOrmanUsername" placeholder="Orman Username" />
+                    <input type="text" class="form-control form-control-md" name="citySaglikPin" placeholder="Sağlık Pin" />
+                    <input type="text" class="form-control form-control-md" name="cityItfaiyePin" placeholder="İtfaiye Pin" />
+                    <input type="text" class="form-control form-control-md" name="cityJandarmaPin" placeholder="Jandarma Pin" />
+                    <input type="text" class="form-control form-control-md" name="cityEmniyetPin" placeholder="Emniyet Pin" />
+                    <input type="text" class="form-control form-control-md" name="cityAfadPin" placeholder="Afad Pin" />
+                    <input type="text" class="form-control form-control-md" name="citySGuvenlikPin" placeholder="Sahil Güvenlik Pin" />
+                    <input type="text" class="form-control form-control-md" name="cityOrmanPin" placeholder="Orman Pin" />
+                    <input type="text" class="form-control form-control-md" name="flet_id" placeholder="Flet Id" />
+
+                </div>
+                <div class="form-group">
+                    <label for="cityCodeId">Şehir Kodu</label>
+                    @{
+                        var cityCodeid = @HomeController.yetkiliId;
+                    }
+                    <input type="number" class="form-control form-control-md" name="cityCodeId" value="@cityCodeid" readonly />
+                    </div>
+                    <input type="submit" class="btn btn-primary btn-lg btn-block" value="Ekle" />
+    </form>
+            break;
+        }
+        else
+        {
+            i++;
+            if (i == 1)
+            {
+    <h1>Kullanıcınıza bağlı bir il zaten mevcuttur.</h1>   
+    <a href="Index/ilYetkilisi"> <p>İlinizi görüntülemek için tıklayın.</p></a>
+            }
+         
+            continue;
+        }
+
+    }
+   
+}
+
+

@@ -1,0 +1,29 @@
+﻿@using CityInformation.Models
+@using cityInfortmation.Controllers
+@model IEnumerable<CityInformation.Models.Entities.Authorized>
+@{
+    ViewData["Title"] = "Add Personal";
+    Layout = "adminLayout";
+}
+@{
+}
+
+<h1>@ViewData["Hata"]</h1>
+<form asp-action="addPersonal" asp-controller="admin" method="post">
+    <div class="form-group">
+        <input type="number" class="form-control form-control-md" name="authorizedId" placeholder="Kullanıcı Id" required />
+        <input type="text" class="form-control form-control-md" name="authorizedUsername" placeholder="Kullanıcı Adı" required />
+        <input type="password" class="form-control form-control-md" name="authorizedPassword" placeholder="Kullanıcı Şifre" required />
+        <select name="Roles"  class="form-control form-control-md">
+            <option value="D">Developer</option>
+            <option value="Y">Yetkili</option>
+             <option value="A">Admin</option>
+        </select>
+        <input type="submit" class="btn btn-primary btn-lg btn-block" value="Ekle" />
+    </div>
+</form>
+
+
+
+
+

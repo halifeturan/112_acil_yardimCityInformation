@@ -1,0 +1,173 @@
+﻿@using cityInfo.Controllers
+
+@model IEnumerable<CityInformation.Models.Entities.CityProp>
+
+    @{
+    ViewData["Title"] = "listCity";
+    }
+
+    <h1>City List</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.cityCodeId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.cityName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.citySaglikUsername)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.cityItfaiyeUsername)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.cityJandarmaUsername)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.cityEmniyetUsername)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.cityAfadUsername)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.citySGuvenlikUsername)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.cityOrmanUsername)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.citySaglikPin)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.cityItfaiyePin)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.cityJandarmaPin)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.cityEmniyetPin)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.cityAfadPin)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.citySGuvenlikPin)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.cityOrmanPin)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.flet_id)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+               <td>
+                        @Html.DisplayFor(modelItem => item.cityCodeId)
+                    </td>
+                    <td>
+                          @if (item.cityName != null)
+                    {
+                        @ilYetkilisiController.crypt.Decrypt(item.cityName, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                    }
+                </td>
+                    <td>
+                         @if (item.citySaglikUsername != null)
+                        {
+                            @ilYetkilisiController.crypt.Decrypt(item.citySaglikUsername, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+                    </td>
+                    <td>
+                         @if (item.cityItfaiyeUsername != null)
+                        {
+                            @ilYetkilisiController.crypt.Decrypt(item.cityItfaiyeUsername, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+                    </td>
+                    <td>
+                         @if (item.cityJandarmaUsername != null)
+                        {
+                            @ilYetkilisiController.crypt.Decrypt(item.cityJandarmaUsername, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+                    </td>
+                    <td>
+                        @if (item.cityEmniyetUsername != null)
+                        {
+                            @ilYetkilisiController.crypt.Decrypt(item.cityEmniyetUsername, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+                    </td>
+                    <td>
+                        @if (item.cityAfadUsername != null)
+                        {
+                            @ilYetkilisiController.crypt.Decrypt(item.cityAfadUsername, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+                    </td>
+                    <td>
+                        @if (item.citySGuvenlikUsername != null)
+                        {
+                        @ilYetkilisiController.crypt.Decrypt(item.citySGuvenlikUsername, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+                    </td>
+                    <td>
+                        @if (item.cityOrmanUsername != null)
+                        {
+                            @ilYetkilisiController.crypt.Decrypt(item.cityOrmanUsername, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+                    </td>
+                    <td>
+                        @if (item.citySaglikPin != null)
+                        {
+                            @ilYetkilisiController.crypt.Decrypt(item.citySaglikPin, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+                    </td>
+                    <td>
+                        @if (item.cityItfaiyePin != null)
+                        {
+                            @ilYetkilisiController.crypt.Decrypt(item.cityItfaiyePin, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+                    </td>
+                    <td>
+                        @if (item.cityJandarmaPin != null)
+                        {
+                            @ilYetkilisiController.crypt.Decrypt(item.cityJandarmaPin, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+                    </td>
+                    <td>
+                        @if (item.cityEmniyetPin != null)
+                        {
+                            @ilYetkilisiController.crypt.Decrypt(item.cityEmniyetPin, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+                    </td>
+                    <td>
+                        @if (item.cityAfadPin != null)
+                        {
+                            @ilYetkilisiController.crypt.Decrypt(item.cityAfadPin, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+                    </td>
+                    <td>
+                        @if(item.citySGuvenlikPin != null)
+                        {
+                        @ilYetkilisiController.crypt.Decrypt(item.citySGuvenlikPin, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+
+                    </td>
+                    <td>
+                        @if (item.cityOrmanPin != null)
+                        {
+                        @ilYetkilisiController.crypt.Decrypt(item.cityOrmanPin, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+                    </td>
+                    <td>
+                       @if (item.flet_id != null)
+                        {
+                        @ilYetkilisiController.crypt.Decrypt(item.flet_id, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+                    </td>
+            </tr>
+            }
+        </tbody>
+    </table>

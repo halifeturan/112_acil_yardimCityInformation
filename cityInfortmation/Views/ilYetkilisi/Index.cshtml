@@ -1,0 +1,411 @@
+﻿@using cityInfo.Controllers
+@model IEnumerable<CityInformation.Models.Entities.CityProp>
+@{
+    Layout = "addCityNoLayout";
+
+}
+<h1>City List</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.cityCodeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cityName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.citySaglikUsername)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cityItfaiyeUsername)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cityJandarmaUsername)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cityEmniyetUsername)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cityAfadUsername)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.citySGuvenlikUsername)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cityOrmanUsername)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.citySaglikPin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cityItfaiyePin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cityJandarmaPin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cityEmniyetPin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cityAfadPin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.citySGuvenlikPin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cityOrmanPin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.flet_id)
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+            int ilId;
+
+            ilId = Convert.ToInt32(ViewData["ilId"]);
+            @if (ilId == item.cityCodeId)
+            {   //
+
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.cityCodeId)
+                    </td>
+                    <td>
+                         @if (item.cityName != null)
+                        {
+                            @ilYetkilisiController.crypt.Decrypt(item.cityName, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+                    </td>
+                    <td>
+                         @if (item.citySaglikUsername != null)
+                        {
+                            @ilYetkilisiController.crypt.Decrypt(item.citySaglikUsername, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+                    </td>
+                    <td>
+                         @if (item.cityItfaiyeUsername != null)
+                        {
+                            @ilYetkilisiController.crypt.Decrypt(item.cityItfaiyeUsername, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+                    </td>
+                    <td>
+                         @if (item.cityJandarmaUsername != null)
+                        {
+                            @ilYetkilisiController.crypt.Decrypt(item.cityJandarmaUsername, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+                    </td>
+                    <td>
+                        @if (item.cityEmniyetUsername != null)
+                        {
+                            @ilYetkilisiController.crypt.Decrypt(item.cityEmniyetUsername, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+                    </td>
+                    <td>
+                        @if (item.cityAfadUsername != null)
+                        {
+                            @ilYetkilisiController.crypt.Decrypt(item.cityAfadUsername, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+                    </td>
+                    <td>
+                        @if (item.citySGuvenlikUsername != null)
+                        {
+                        @ilYetkilisiController.crypt.Decrypt(item.citySGuvenlikUsername, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+                    </td>
+                    <td>
+                        @if (item.cityOrmanUsername != null)
+                        {
+                            @ilYetkilisiController.crypt.Decrypt(item.cityOrmanUsername, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+                    </td>
+                    <td>
+                        @if (item.citySaglikPin != null)
+                        {
+                            @ilYetkilisiController.crypt.Decrypt(item.citySaglikPin, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+                    </td>
+                    <td>
+                        @if (item.cityItfaiyePin != null)
+                        {
+                            @ilYetkilisiController.crypt.Decrypt(item.cityItfaiyePin, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+                    </td>
+                    <td>
+                        @if (item.cityJandarmaPin != null)
+                        {
+                            @ilYetkilisiController.crypt.Decrypt(item.cityJandarmaPin, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+                    </td>
+                    <td>
+                        @if (item.cityEmniyetPin != null)
+                        {
+                            @ilYetkilisiController.crypt.Decrypt(item.cityEmniyetPin, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+                    </td>
+                    <td>
+                        @if (item.cityAfadPin != null)
+                        {
+                            @ilYetkilisiController.crypt.Decrypt(item.cityAfadPin, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+                    </td>
+                    <td>
+                        @if(item.citySGuvenlikPin != null)
+                        {
+                        @ilYetkilisiController.crypt.Decrypt(item.citySGuvenlikPin, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+
+                    </td>
+                    <td>
+                        @if (item.cityOrmanPin != null)
+                        {
+                        @ilYetkilisiController.crypt.Decrypt(item.cityOrmanPin, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+                    </td>
+                    <td>
+                       @if (item.flet_id != null)
+                        {
+                        @ilYetkilisiController.crypt.Decrypt(item.flet_id, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)
+                        }
+                    </td>
+                    <td>
+                        <!-- Button trigger modal -->
+                        <a class="btn btn-outline-warning" data-toggle="modal" data-target="#exampleModal2-@item.cityCodeId">
+                            UPDATE
+                        </a>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal2-@item.cityCodeId" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Update City</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h1>Update City</h1>
+
+                                        <h4>City</h4>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <form action="/ilYetkilisi/updateCity" method="post">
+
+                                                    <input type="hidden" name="cityCodeId" value="@item.cityCodeId" /> @*for update process, we need this key*@
+
+                                                    <div class="form-group">
+                                                        <label class="control-label">City Name</label>
+                                                        @if (item.cityName != null)
+                                                        {
+                                                            <input name="cityName" class="form-control" value="@ilYetkilisiController.crypt.Decrypt(item.cityName, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)" />
+                                                        }
+                                                           else
+                                                        {
+                                                             <input name="cityName" class="form-control" value="" />
+                                                        }
+
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="control-label">Sağlık Username</label>
+                                                        @if (item.citySaglikUsername != null)
+                                                        {
+                                                            <input name="citySaglikUsername" class="form-control" value="@ilYetkilisiController.crypt.Decrypt(item.citySaglikUsername, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)" />
+                                                        }
+                                                           else
+                                                        {
+                                                             <input name="citySaglikUsername" class="form-control" value="" />
+                                                        }
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label">İtfaiye Username</label>
+                                                         @if (item.cityItfaiyeUsername != null)
+                                                        {
+                                                            <input name="cityItfaiyekUsername" class="form-control" value="@ilYetkilisiController.crypt.Decrypt(item.cityItfaiyeUsername, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)" />
+                                                        }
+                                                           else
+                                                        {
+                                                             <input name="cityItfaiyekUsername" class="form-control" value="" />
+                                                        }
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label">Jandarma Username</label>
+                                                        @if (item.cityJandarmaUsername != null)
+                                                        {
+                                                            <input name="cityJandarmaUsername" class="form-control" value="@ilYetkilisiController.crypt.Decrypt(item.cityJandarmaUsername, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)" />
+                                                        }
+                                                          else
+                                                        {
+                                                             <input name="cityJandarmaUsername" class="form-control" value="" />
+                                                        }
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label">Emniyet Username</label>
+                                                        @if (item.cityEmniyetUsername != null)
+                                                        {
+                                                            <input name="cityEmniyetUsername" class="form-control" value=" @ilYetkilisiController.crypt.Decrypt(item.cityEmniyetUsername, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)" />
+                                                        }
+                                                         else
+                                                        {
+                                                             <input name="cityEmniyetUsername" class="form-control" value="" />
+                                                        }
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label">Afad Username</label>
+                                                        @if (item.cityAfadUsername != null)
+                                                        {
+                                                            <input name="cityAfadUsername" class="form-control" value="@ilYetkilisiController.crypt.Decrypt(item.cityAfadUsername, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)" />
+                                                        }
+                                                         else
+                                                        {
+                                                             <input name="cityAfadUsername" class="form-control" value="" />
+                                                        }
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label">Sahil Güvenlik Username</label>
+                                                        @if (item.citySGuvenlikUsername != null)
+                                                        {
+                                                            <input name="citySGuvenlikUsername" class="form-control" value=" @ilYetkilisiController.crypt.Decrypt(item.citySGuvenlikUsername, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)" />
+                                                        }
+                                                        else
+                                                        {
+                                                             <input name="citySGuvenlikUsername" class="form-control" value="" />
+                                                        }
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label">Orman Username</label>
+                                                        @if (item.cityOrmanUsername != null)
+                                                        {
+                                                            <input name="cityOrmanUsername" class="form-control" value="@ilYetkilisiController.crypt.Decrypt(item.cityOrmanUsername, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)" />
+                                                        }
+                                                         else
+                                                        {
+                                                             <input name="cityOrmanUsername" class="form-control" value="" />
+                                                        }
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label">Sağlık Pin</label>
+                                                        @if (item.citySaglikPin != null)
+                                                        {
+                                                            <input name="citySaglikPin" class="form-control" value=" @ilYetkilisiController.crypt.Decrypt(item.citySaglikPin, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)" />
+                                                        }
+                                                          else
+                                                        {
+                                                             <input name="citySaglikPin" class="form-control" value="" />
+                                                        }
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label">İtfaiye Pin</label>
+                                                       @if (item.cityItfaiyePin != null)
+                                                        {
+                                                            <input name="cityItfaiyePin" class="form-control" value="@ilYetkilisiController.crypt.Decrypt(item.cityItfaiyePin, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)" />
+                                                        }
+                                                           else
+                                                        {
+                                                             <input name="cityItfaiyePin" class="form-control" value="" />
+                                                        }
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label">Jandarma Pin</label>
+                                                      @if (item.cityJandarmaPin != null)
+                                                        {
+                                                            <input name="cityJandarmaPin" class="form-control" value="@ilYetkilisiController.crypt.Decrypt(item.cityJandarmaPin, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)" />
+                                                        }
+                                                            else
+                                                        {
+                                                             <input name="cityJandarmaPin" class="form-control" value="" />
+                                                        }
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label">Emniyet Pin</label>
+                                                     @if (item.cityEmniyetPin != null)
+                                                        {
+                                                            <input name="cityEmniyetPin" class="form-control" value="@ilYetkilisiController.crypt.Decrypt(item.cityEmniyetPin, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)" />
+                                                        }
+                                                             else
+                                                        {
+                                                             <input name="cityEmniyetPin" class="form-control" value="" />
+                                                        }
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label">Afad Pin</label>
+                                                       @if (item.cityAfadPin != null)
+                                                        {
+                                                            <input name="cityAfadPin" class="form-control" value="@ilYetkilisiController.crypt.Decrypt(item.cityAfadPin, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)" />
+                                                        }
+                                                              else
+                                                        {
+                                                             <input name="cityAfadPin" class="form-control" value="" />
+                                                        }
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label">Sahil Güvenlik Pin</label>
+                                                        @if (item.citySGuvenlikPin != null)
+                                                        {
+                                                            <input name="citySGuvenlikPin" class="form-control" value=" @ilYetkilisiController.crypt.Decrypt(item.citySGuvenlikPin, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)" />
+                                                        }
+                                                               else
+                                                        {
+                                                             <input name="citySGuvenlikPin" class="form-control" value="" />
+                                                        }
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label">Orman Pin</label>
+                                                      @if (item.cityOrmanPin != null)
+                                                        {
+                                                            <input name="cityOrmanPin" class="form-control" value="@ilYetkilisiController.crypt.Decrypt(item.cityOrmanPin, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)" />
+                                                        }
+                                                                 else
+                                                        {
+                                                             <input name="cityOrmanPin" class="form-control" value="" />
+                                                        }
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label">flet_id</label>
+                                                       @if (item.flet_id != null)
+                                                        {
+                                                            <input name="flet_id" class="form-control" value="@ilYetkilisiController.crypt.Decrypt(item.flet_id, "a102193198482", "a1021931984823", "SHA1", 3, "@1B2c3D4e5F6g7H8", 256)" />
+                                                        }
+                                                                  else
+                                                        {
+                                                             <input name="flet_id" class="form-control" value="" />
+                                                        }
+                                                    </div>
+
+
+
+                                                    <div class="form-group">
+                                                        <input type="submit" value="Save" class="btn btn-primary" />
+                                                    </div>
+
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer text-light">
+                                        <a class="btn btn-secondary" data-dismiss="modal">Close</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+
+                </tr>
+                break;
+            }
+            else
+            {
+                continue;
+            }
+        }
+
+    </tbody>
+</table>
