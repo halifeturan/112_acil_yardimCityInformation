@@ -53,7 +53,7 @@ namespace cityInfortmation.Controllers
                 if (db.Authorized.Find(autho.authorizedId) == null)
                 {
                     db.Authorized.Add(autho);
-                    db.SaveChanges();
+                    """db.SaveChanges();
                 }
                 else
                 {

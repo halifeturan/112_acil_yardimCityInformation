@@ -63,9 +63,10 @@
     </thead>
 
     <tbody>
+
         @foreach (var item in Model)
         {
-
+         
             int ilId;
 
             ilId = Convert.ToInt32(ViewData["ilId"]);
@@ -74,8 +75,11 @@
 
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => item.cityCodeId)
-                    </td>
+                        @if (item.cityCodeId <= 81)
+                        {
+                            @Html.DisplayFor(modelItem => item.cityCodeId)
+                        }
+                        </td>
                     <td>
                          @if (item.cityName != null)
                         {

@@ -12,14 +12,13 @@ namespace CityInformation.Models.Entities
         [Key]
 
         public int authorizedId { get; set; }
-        [StringLength(50)]
+  
 
         public string authorizedUserName { get; set; }
 
-        [StringLength(50)]
+
         public string authorizedPassword { get; set; }
 
-        [StringLength(1)]
         public string Roles { get; set; }
     }
 }
